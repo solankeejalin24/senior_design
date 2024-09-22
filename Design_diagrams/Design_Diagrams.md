@@ -6,4 +6,8 @@ In this highest level view, we have several inputs from the user, being Project 
 
 ## **Design D1:**
 
+![alt text](Diagram_D1.png)
 
+## **Design D2:**
+
+![alt text](Diagram_D2.png)

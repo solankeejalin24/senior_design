@@ -27,4 +27,3 @@ We need to ensure that our AI agents are transparent in their decision-making pr
 
 ### Data Privacy
 Our project involves handling sensitive project management data, which means we must prioritize data security and privacy. We are responsible for ensuring that all user data is securely stored and protected from unauthorized access. Additionally, we need to ensure that any external APIs or services we use comply with security standards to avoid exposing sensitive information.
-```

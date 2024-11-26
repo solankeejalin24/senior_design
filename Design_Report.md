@@ -25,7 +25,6 @@
 ## Team names and project abstract
 - Team members: Arya Narke, Varad Parte, Daksh Prajapati, Jalin Solankee
 - Advisor: Dr. Raj Bhatnagar
-- [Link to our Biographies](Professional_Bios)
 - **Project Abstract**: 
 Our project, Autonomous AI Agents for Project Management Automation, harnesses AI to transform project management with automated task allocation and task prioritization, predictive analytics, and natural language processing. Leveraging Jira API calls via Python, the backend efficiently retrieves and processes project data, which is stored in MongoDB databases. Machine learning models analyze this data to predict delays and resource needs. An intuitive frontend in React.js provides real-time insights and interactive dashboards, while a GPT-powered chatbot interface answers queries from team members and project managers. This system empowers proactive project oversight, optimizing task allocation, progress tracking, and decision-making for enhanced productivity and efficiency.​
 
@@ -97,7 +96,7 @@ This diagram provides a basic overview of how the system operates at a high leve
 - **Output:** 
    - The AI Agent responds to user queries with information such as task assignments, project status, or predictive insights on potential delays.
 
-![alt text](Diagram_D0.png)
+![alt text](https://github.com/solankeejalin24/CleverCollab/blob/main/Design_diagrams/Diagram_D0.png)
 
 #### Design D1 (Subsystem Breakdown) 
 
@@ -200,9 +199,56 @@ Assigned to: **Daksh Prajapati**
 Assigned to: **Jalin Solankee**
 
 ### Timeline
-**Milestone, Timeline, and effort matrix**
+| Task ID | Task Description                                           | Assigned To          | Start Week | End Week | Milestone                          |
+|---------|------------------------------------------------------------|----------------------|------------|----------|------------------------------------|
+| 1       | Decision on LLM Models, Databases, and Frameworks          | All Team Members     | Week 6     | Week 8   | Decision on Technologies          |
+| 2       | Development of Proof of Concepts                           | All Team Members     | Week 8     | Week 10  | Proof of Concepts Completed       |
+| 3       | Research Data Preprocessing Techniques for Project Data    | Varad Parte          | Week 6     | Week 8   |                                    |
+| 4       | Investigate Optimal ML Models for Predictive Analysis      | Jalin Solankee       | Week 6     | Week 8   |                                    |
+| 5       | Design Chatbot Interface                                   | Daksh Prajapati      | Week 6     | Week 8   |                                    |
+| 6       | Develop Data Pipeline for Project Management Boards        | Daksh Prajapati      | Week 11    | Week 13  | Data Pipeline Developed           |
+| 7       | Implement ML Model for Task Prioritization                 | Arya Narke           | Week 11    | Week 15  | ML Model Implemented              |
+| 8       | Test Task Allocation Module                                | Varad Parte          | Week 11    | Week 15  | Task Allocation Module Tested     |
+| 9       | Specify Data Preprocessing Techniques for Predictive Analysis | Jalin Solankee      | Week 11    | Week 13  |                                    |
+| 10      | Develop OpenAI-Based Response Generation Module            | Daksh Prajapati      | Week 16    | Week 19  | Chatbot Module Developed          |
+| 11      | Design Task Allocation Algorithm                           | Varad Parte          | Week 16    | Week 19  | Task Allocation Algorithm Designed |
+| 12      | Develop Query Parsing Mechanisms                          | Jalin Solankee       | Week 16    | Week 19  | Query Parsing Developed           |
+| 13      | Document Integration Process of Chatbot Interface          | Daksh Prajapati      | Week 19    | Week 20  |                                    |
+| 14      | Validate Trained AI Model with Sample Data                 | Arya Narke           | Week 20    | Week 22  | AI Model Validated                |
+| 15      | Test System's Ability for Real-Time Updates and Risk Identification | All Team Members | Week 20    | Week 22  | System Testing Completed          |
+| 16      | Refine Chatbot Interface Based on Feedback                 | Daksh Prajapati      | Week 23    | Week 24  | Chatbot Refined                   |
+| 17      | Implement Context-Matching Logic for Complex Queries       | Jalin Solankee       | Week 23    | Week 24  | Context-Matching Implemented      |
+| 18      | Test Skill-Based Task Allocation Feature                   | Arya Narke           | Week 24    | Week 25  | Task Allocation Feature Tested    |
+| 19      | Validate System's Accuracy in Predicting Outcomes          | Varad Parte          | Week 24    | Week 25  | Predictive Accuracy Validated     |
+| 20      | Design User Interface for Task Prioritization and Progress Tracking | Daksh Prajapati   | Week 24    | Week 25  | User Interface Designed           |
+| 21      | Document All API Integrations and Developments             | Jalin Solankee       | Week 20    | Week 26  | Documentation Completed           |
+| 22      | Final Deployment                                           | All Team Members     | Week 26    | Week 26  | Final Deployment Completed        |
 
 ### Effort Matrix
+| Task Description                                | Arya Narke | Varad Parte | Daksh Prajapati | Jalin Solankee | Primary Responsibility       |
+|------------------------------------------------|------------|-------------|------------------|----------------|-----------------------------|
+| Decision on LLM Models, Databases, and Frameworks | 25%       | 25%         | 25%              | 25%            | All Team Members            |
+| Development of Proof of Concepts               | 25%       | 25%         | 25%              | 25%            | All Team Members            |
+| Research Data Preprocessing Techniques         | 10%       | 70%         | 10%              | 10%            | Varad Parte                 |
+| Investigate Optimal ML Models for Predictive Analysis | 10%    | 10%         | 10%              | 70%            | Jalin Solankee              |
+| Design Chatbot Interface                       | 10%       | 10%         | 70%              | 10%            | Daksh Prajapati             |
+| Develop Data Pipeline for Project Management Boards | 80%    | 10%         | 5%               | 5%             | Arya Narke                  |
+| Implement ML Model for Task Prioritization     | 70%       | 10%         | 10%              | 10%            | Arya Narke                  |
+| Test Task Allocation Module                   | 10%       | 70%         | 10%              | 10%            | Varad Parte                 |
+| Specify Data Preprocessing Techniques         | 10%       | 10%         | 10%              | 70%            | Jalin Solankee              |
+| Develop OpenAI-Based Response Generation Module | 10%      | 10%         | 70%              | 10%            | Daksh Prajapati             |
+| Design Task Allocation Algorithm              | 10%       | 70%         | 10%              | 10%            | Varad Parte                 |
+| Develop Query Parsing Mechanisms             | 10%       | 10%         | 10%              | 70%            | Jalin Solankee              |
+| Document Integration Process of Chatbot Interface | 10%     | 10%         | 70%              | 10%            | Daksh Prajapati             |
+| Validate Trained AI Model with Sample Data    | 70%       | 10%         | 10%              | 10%            | Arya Narke                  |
+| Test System's Ability for Real-Time Updates and Risk Identification | 25% | 25% | 25%      | 25%            | All Team Members            |
+| Refine Chatbot Interface Based on Feedback    | 10%       | 10%         | 70%              | 10%            | Daksh Prajapati             |
+| Implement Context-Matching Logic             | 10%       | 10%         | 10%              | 70%            | Jalin Solankee              |
+| Test Skill-Based Task Allocation Feature      | 70%       | 10%         | 10%              | 10%            | Arya Narke                  |
+| Validate System's Accuracy in Predicting Outcomes | 10%    | 70%         | 10%              | 10%            | Varad Parte                 |
+| Design User Interface for Task Prioritization | 10%       | 10%         | 70%              | 10%            | Daksh Prajapati             |
+| Document All API Integrations and Developments | 10%      | 10%         | 10%              | 70%            | Jalin Solankee              |
+| Final Deployment                              | 25%       | 25%         | 25%              | 25%            | All Team Members            |
 
 ## ABET Concerns Essay
 ### Constraint Essay
@@ -243,5 +289,11 @@ Our project involves handling sensitive project management data, which means we 
 ## Self-Assessment Essay
 1. [**Arya Narke**](https://github.com/solankeejalin24/CleverCollab/blob/main/Essays/Individual_Capstone_Assignment_narkean.pdf)
 2. [**Varad Parte**](https://github.com/solankeejalin24/CleverCollab/blob/main/Essays/Individual%20Capstone%20Assignment_partevr.pdf)
-3. [**Daksh Prajapati**]()
+3. [**Daksh Prajapati**](https://github.com/solankeejalin24/CleverCollab/blob/main/Essays/Individual_Capstone_Assignment_prajapdh.pdf)
 4. [**Jalin Solankee**](https://github.com/solankeejalin24/CleverCollab/blob/main/Essays/Individual_Capstone_Assignment_solankjp.pdf)
+
+## Professional Biography
+[Link to our professional biographies](Professional_Bios)
+
+## Budget
+## Appendix

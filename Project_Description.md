@@ -1,6 +1,6 @@
 # Autonomous AI Agents for Project Management Automation
 
-### Team : JVDA
+### Team : CleverCollab
 #### Members
 - Arya Narke(CS) [narkean@mail.uc.edu](mailto:narkean@mail.uc.edu)
 - Varad Parte(CS) [partevr@mail.uc.edu](mailto:partevr@mail.uc.edu)

@@ -110,7 +110,7 @@ This diagram expands upon the AI agent and divides it into core subsystems that 
 - **Output:** 
    - Responses are generated for users, including status updates, task assignments, and potential risk forecasts.
 
-![alt text](Diagram_D1.png)
+![alt text](https://github.com/solankeejalin24/CleverCollab/blob/main/Design_diagrams/Diagram_D1.png)
 
 #### Design D2 (Detailed Functional Breakdown) 
 
@@ -125,7 +125,7 @@ This is a more detailed version of Design D1, breaking down each component furth
    - The AI provides real-time responses to users, delivering status updates, task assignments based on skills, and predictive insights about potential risks.
    - Responses help managers and team members optimize task management and avoid delays.
 
-![alt text](Diagram_D2.png)
+![alt text](https://github.com/solankeejalin24/CleverCollab/blob/main/Design_diagrams/Diagram_D2.png)
 
 Each diagram progressively elaborates on the system, with D2 providing a comprehensive look at the interaction between subsystems for task allocation, predictive analysis, and natural language processing.
 

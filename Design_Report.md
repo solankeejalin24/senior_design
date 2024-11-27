@@ -6,26 +6,21 @@
 3. [User Stories and Design Diagrams](#user-stories-and-design-diagrams)
     - [User Stories](#user-stories)
     - [Design Diagrams](#design-diagrams)
-      - [Design D0](#design-D0)
-      - [Design D1](#design-D1)
-      - [Design D2](#design-D2)
-      - [Design D3](#design-D3)
-      - [Description of the Diagrams](#description-of-the-diagrams)
 4. [Project Tasks and Timeline](#project-tasks-and-timeline)
     - [Task List](#task-list)
     - [Timeline](#timeline)
     - [Effort Matrix](#effort-matrix)
 5. [ABET Concerns Essay](#abet-concerns-essay)
-6. [PPT Slideshow (includes ABET Concerns)](#ppt-slideshow-includes-abet-concerns)
+6. [PPT Slideshow](#ppt-slideshow)
 7. [Self-Assessment Essays](#self-assessment-essays)
 8. [Professional Biographies](#professional-biographies)
 9. [Budget](#budget)
 10. [Appendix](#appendix)
 
-## Team names and project abstract
+## Team Names and Project Abstract
 - Team members: Arya Narke, Varad Parte, Daksh Prajapati, Jalin Solankee
 - Advisor: Dr. Raj Bhatnagar
-- **Project Abstract**: 
+### **Project Abstract**: 
 Our project, Autonomous AI Agents for Project Management Automation, harnesses AI to transform project management with automated task allocation and task prioritization, predictive analytics, and natural language processing. Leveraging Jira API calls via Python, the backend efficiently retrieves and processes project data, which is stored in MongoDB databases. Machine learning models analyze this data to predict delays and resource needs. An intuitive frontend in React.js provides real-time insights and interactive dashboards, while a GPT-powered chatbot interface answers queries from team members and project managers. This system empowers proactive project oversight, optimizing task allocation, progress tracking, and decision-making for enhanced productivity and efficiency.​
 
 ## Project Description
@@ -131,9 +126,9 @@ Each diagram progressively elaborates on the system, with D2 providing a compreh
 
 ## Project Tasks and Timeline
 ### Task List
-#### Project: Autonomous AI Agents for Project Management Automation
 
-##### **PHASE 1**
+
+#### **PHASE 1**
 1. Investigate optimal machine learning models for predictive task analysis and forecasting delays.
 Assigned to: **Jalin Solankee**
 
@@ -146,7 +141,7 @@ Assigned to: **Daksh Prajapati**
 4. Develop a data pipeline to integrate project/task data from project management boards into the AI agent system.
 Assigned to: **Arya Narke**
 
-##### **PHASE 2**
+#### **PHASE 2**
 5. Implement the machine learning model for task prioritization based on deadlines, dependencies, and team members' availability.
 Assigned to: **Arya Narke**
 
@@ -159,7 +154,7 @@ Assigned to: **Daksh Prajapati**
 8. Specify the data preprocessing techniques needed for predictive analysis to anticipate project delays.
 Assigned to: **Jalin Solankee**
 
-##### **PHASE 3**
+#### **PHASE 3**
 9. Validate the trained AI model by running sample project data and ensuring accurate predictions of potential issues.
 Assigned to: **Arya Narke**
 
@@ -172,7 +167,7 @@ Assigned to: **Daksh Prajapati**
 12. Develop query parsing mechanisms for interpreting user prompts and directing queries to the appropriate modules (e.g., task allocation, predictive generation).
 Assigned to: **Jalin Solankee**
 
-##### **PHASE 4**
+#### **PHASE 4**
 13. Test the overall system's ability to generate real-time project status updates and identify at-risk tasks.
 Assigned to: **Arya Narke**
 
@@ -185,7 +180,7 @@ Assigned to: **Jalin Solankee**
 16. Develop the predictive analysis module using historical project data to forecast potential delays and project risks.
 Assigned to: **Varad Parte**
 
-##### **PHASE 5**
+#### **PHASE 5**
 17. Test the skill-based task allocation feature with sample user data to ensure proper matching and prioritization.
 Assigned to: **Arya Narke**
 
@@ -251,40 +246,37 @@ Assigned to: **Jalin Solankee**
 | Final Deployment                              | 25%       | 25%         | 25%              | 25%            | All Team Members            |
 
 ## ABET Concerns Essay
-### Constraint Essay
 
-In our project, several constraints impact the design and the possible solutions we can implement.
+### Economic Constraints
 
-#### Economic Constraints
-
-##### Budget and Resources
+#### Budget and Resources
 Since we are integrating technologies like machine learning models and GPT APIs, there are costs associated with API usage, cloud storage, and hosting. Our reliance on freeware or shareware might limit the scope of our project, especially when it comes to features like real-time updates or handling large datasets. If we are constrained by a limited budget, this could affect the quality and performance of the solution.
 
-##### Funding
+#### Funding
 We are working with self-funded resources, which limits our access to premium services such as high-tier APIs or cloud infrastructure. This might impact our system's ability to handle large volumes of data efficiently.
 
-#### Professional Constraints
+### Professional Constraints
 
-##### Specialized Expertise
+#### Specialized Expertise
 Our project requires expertise in advanced technologies like AI, machine learning, and natural language processing. While developing the project, we are gaining valuable knowledge and experience in these areas, which contributes to our professional growth. However, gaps in our expertise might slow down progress or present challenges in implementing certain features.
 
-#### Ethical Constraints
+### Ethical Constraints
 
-##### Bias in AI Models
+#### Bias in AI Models
 Since we are using AI and machine learning models, it is important for us to ensure that our algorithms do not introduce bias into task allocation or project predictions. If our models assign tasks unfairly, it could lead to an unbalanced workload or unequal task distribution among team members, which raises ethical concerns.
 
-##### Transparency and Fairness
+#### Transparency and Fairness
 We need to ensure that our AI agents are transparent in their decision-making processes. Users should clearly understand how tasks are assigned and on what basis. If the decision-making process is opaque, it could lead to mistrust in the system, which could affect user adoption.
 
-#### Security Constraints
+### Security Constraints
 
-##### Data Privacy
+#### Data Privacy
 Our project involves handling sensitive project management data, which means we must prioritize data security and privacy. We are responsible for ensuring that all user data is securely stored and protected from unauthorized access. Additionally, we need to ensure that any external APIs or services we use comply with security standards to avoid exposing sensitive information.
 
-## PPT Slideshow (includes ABET Concerns)
-**Video Presentation**: [Senior Design-20241027_172629-Meeting Recording.mp4](https://mailuc-my.sharepoint.com/personal/narkean_mail_uc_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fnarkean%5Fmail%5Fuc%5Fedu%2FDocuments%2FRecordings%2FSenior%20Design%2D20241027%5F172629%2DMeeting%20Recording%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Eb3944bf8%2Daa5e%2D4673%2Db69b%2D9c1cfb42d422)
+## PPT Slideshow
+**Video Presentation**: [CleverCollab Fall Presentation](https://mailuc-my.sharepoint.com/personal/narkean_mail_uc_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fnarkean%5Fmail%5Fuc%5Fedu%2FDocuments%2FRecordings%2FSenior%20Design%2D20241027%5F172629%2DMeeting%20Recording%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Eb3944bf8%2Daa5e%2D4673%2Db69b%2D9c1cfb42d422)
 
-**Slide Deck**: [Slide Deck](https://mailuc-my.sharepoint.com/:p:/g/personal/prajapdh_mail_uc_edu/EauuGWDS66NBnsKtTf9hCxUBd1RkEIg86fepzMMc6UQg2g?e=3xPsEd) 
+**Slide Deck**: [Fall Presentation Slides](https://mailuc-my.sharepoint.com/:p:/g/personal/prajapdh_mail_uc_edu/EauuGWDS66NBnsKtTf9hCxUBd1RkEIg86fepzMMc6UQg2g?e=3xPsEd) 
 
 ## Self-Assessment Essay
 1. [**Arya Narke**](https://github.com/solankeejalin24/CleverCollab/blob/main/Essays/Individual_Capstone_Assignment_narkean.pdf)
@@ -296,4 +288,10 @@ Our project involves handling sensitive project management data, which means we 
 [Link to our professional biographies](Professional_Bios)
 
 ## Budget
+Our project budget includes $15 spent on purchasing OpenAI 4o tokens, which are sufficient to meet our needs through the end of Spring 2025. Additionally, we activated a free Jira subscription with limited features, which adequately supports all the required components and scope of our project. These resources ensure cost-effective yet efficient development for our objectives.
 ## Appendix
+- [Lang-Chain course used to learn RAG model architecture](https://github.com/bhancockio/langchain-crash-course)
+- [JIRA API and Forge documentation](https://github.com/bhancockio/langchain-crash-course)
+
+### Team Effort Table
+

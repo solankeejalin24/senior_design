@@ -292,6 +292,7 @@ Our project budget includes $15 spent on purchasing OpenAI 4o tokens, which are 
 ## Appendix
 - [Lang-Chain course used to learn RAG model architecture](https://github.com/bhancockio/langchain-crash-course)
 - [JIRA API and Forge documentation](https://github.com/bhancockio/langchain-crash-course)
-
+- [RovoAgent Template for programming](https://community.developer.atlassian.com/t/resources-to-get-started-building-rovo-agents-using-forge/82800)
+- [Analyst Rovo Agent builder description](https://developer.atlassian.com/platform/forge/build-a-jira-issue-analyst-rovo-agent/)
 ### Team Effort Table
 

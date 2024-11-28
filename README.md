@@ -201,8 +201,8 @@ Assigned to: **Jalin Solankee**
 | 3       | Research Data Preprocessing Techniques for Project Data    | Varad Parte          | Week 6     | Week 8   |                                    |
 | 4       | Investigate Optimal ML Models for Predictive Analysis      | Jalin Solankee       | Week 6     | Week 8   |                                    |
 | 5       | Design Chatbot Interface                                   | Daksh Prajapati      | Week 6     | Week 8   |                                    |
-| 6       | Develop Data Pipeline for Project Management Boards        | Daksh Prajapati      | Week 11    | Week 13  | Data Pipeline Developed           |
-| 7       | Implement ML Model for Task Prioritization                 | Arya Narke           | Week 11    | Week 15  | ML Model Implemented              |
+| 6       | Develop Data Pipeline for Project Management Boards        | Arya Narke           | Week 11    | Week 13  | Data Pipeline Developed           |
+| 7       | Implement ML Model for Task Prioritization                 | Daksh Prajapati      | Week 11    | Week 15  | ML Model Implemented              |
 | 8       | Test Task Allocation Module                                | Varad Parte          | Week 11    | Week 15  | Task Allocation Module Tested     |
 | 9       | Specify Data Preprocessing Techniques for Predictive Analysis | Jalin Solankee      | Week 11    | Week 13  |                                    |
 | 10      | Develop OpenAI-Based Response Generation Module            | Daksh Prajapati      | Week 16    | Week 19  | Chatbot Module Developed          |

@@ -1,82 +1,126 @@
-import requests, json
 import os
+import requests
 from dotenv import load_dotenv
+import json
 
-load_dotenv()  # This loads environment variables from .env file
-# print("BASE_URL:", os.getenv('BASE_URL'))
-# print("USER:", os.getenv('USER'))
-# print("API_TOKEN:", os.getenv('API_TOKEN'))
+# Load environment variables from .env file
+load_dotenv()
 
-class JiraClient:
-    def __init__(self):
-        # Load environment variables from .env file
-        load_dotenv()
-        self.base_url = os.getenv('BASE_URL')
-        self.user = os.getenv('USER')
-        self.api_token = os.getenv('API_TOKEN')
+class JiraAPI:
+    def __init__(self, base_url, user, api_token):
+        self.base_url = base_url
+        self.user = user
+        self.api_token = api_token
         self.headers = {
             "Accept": "application/json",
-            "Content-Type": "application/json"
+            "Content": "application/json",
         }
-    
-    def get_issues(self):
-        """Fetch all issues from the Jira project."""
-        try:
-            response = requests.get(self.base_url, headers=self.headers, auth=(self.user, self.api_token))
-            response.raise_for_status()  # Raise an error if the request failed
-            return response.json().get("issues", [])
-        except requests.exceptions.RequestException as e:
-            print(f"An error occurred: {e}")
-            return []
+
+    def get_issues(self, jql, max_results=1000):
+        start_at = 0
+        all_issues = []
+
+        while True:
+            api_url = f"{self.base_url}?jql={jql}&maxResults={max_results}&startAt={start_at}"
+            response = requests.get(api_url, headers=self.headers, auth=(self.user, self.api_token))
+
+            if response.status_code != 200:
+                print(f"Error: {response.status_code} - {response.text}")
+                break
+
+            data = response.json()
+            issues = data.get("issues", [])
+            all_issues.extend(issues)
+
+            # Check if there are more issues to fetch
+            if len(issues) < max_results:
+                break
+
+            start_at += max_results
+
+        return all_issues
+
 
 class Issue:
     def __init__(self, issue_data):
-        """Initialize an Issue object from the API response data."""
-        self.key = issue_data["key"]
-        self.summary = issue_data["fields"].get("summary", "No summary available")
-        self.issue_type = issue_data["fields"].get("issuetype", {}).get("name", "No issue type available")
-        self.description = self.extract_description(issue_data["fields"].get("description", {}))
-        self.assignee = issue_data["fields"].get("assignee", {}).get("displayName", "Unassigned")
-        self.creator = issue_data["fields"].get("creator", {}).get("displayName", "Unknown")
-        self.reporter = issue_data["fields"].get("reporter", {}).get("displayName", "Unknown")
-        self.project_name = issue_data['fields']['project']['name']
-        self.status = issue_data['fields']['status']['name']
+        self.key = issue_data.get("key")
+        self.fields = issue_data.get("fields", {})
+        self.summary = self.fields.get("summary")
+        self.issue_type = self.fields.get("issuetype", {}).get("name")
+        self.status = self.fields.get("status", {}).get("name")
+        self.assignee = self.fields.get("assignee", {}).get("displayName") if self.fields.get("assignee") else "Unassigned"
+        self.due_date = self.fields.get("duedate")
+        self.start_date = self.fields.get("customfield_10015")
+        self.completed_date = self.fields.get("customfield_10062")
+        self.estimated_hours = self.fields.get("customfield_10040")
+        self.description = self.extract_description()
+        self.parent_info = self.extract_parent()
 
-    @staticmethod
-    def extract_description(description_field):
-        """Extract text description from the content field."""
-        if not description_field:
-            return "No description available"
+    def extract_description(self):
+        description = self.fields.get("description", {})
+        description_text = []
+
+        if description.get('type') == 'doc' and description.get('content'):
+            for paragraph in description['content']:
+                for content_item in paragraph['content']:
+                    if content_item['type'] == 'text':
+                        description_text.append(content_item['text'])
         
-        description_content = description_field.get("content", [])
-        for paragraph in description_content:
-            for text in paragraph.get("content", []):
-                return text.get("text", "No description available")
-        return "No description available"
+        return '\n'.join(description_text)
+
+    def extract_parent(self):
+        parent = self.fields.get('parent', {})
+        if parent:
+            parent_name = parent.get('fields', {}).get('summary', 'No Parent Name')
+            parent_key = parent.get('key', 'No Parent ID')
+            return f"{parent_key} - {parent_name}"
+        else:
+            return "No Parent"
 
     def display(self):
-        """Print issue details."""
-        print(f"Project Name: {self.project_name}")
-        print(f"Issue ID: {self.key}")
-        print(f"Issue Name: {self.summary}")
-        print(f"Issue Type: {self.issue_type}")
-        print(f"Issue Description: {self.description}")
-        print(f"Assignee: {self.assignee}")
-        print(f"Creator: {self.creator}")
-        print(f"Reporter: {self.reporter}")
-        print(f"Status: {self.status}")
-        print("===========================================================")
+        issue_data = {
+            "Key": self.key,
+            "Issue Type": self.issue_type,
+            "Summary": self.summary,
+            "Description": self.description,
+            "Status": self.status,
+            "Assignee": self.assignee,
+            "Due Date": self.due_date,
+            "Start Date": self.start_date,
+            "Completed Date": self.completed_date,
+            "Estimated Hours": self.estimated_hours,
+            "Parent": self.parent_info,
+        }
+
+        for key, value in issue_data.items():
+            print(f"{key}: {value}")
+        print("-" * 40)
+
+
+def main():
+    # Get credentials from environment variables
+    base_url = os.getenv("BASE_URL")
+    user = os.getenv("USER")
+    api_token = os.getenv("API_TOKEN")
+
+    # Initialize JiraAPI object
+    jira_api = JiraAPI(base_url, user, api_token)
+
+    # Define your JQL query to fetch issues
+    jql = "issuetype in (Story) AND project = PN2"
+
+    # Get issues from Jira API
+    issues_data = jira_api.get_issues(jql)
+
+    print(f"Total issues fetched: {len(issues_data)}")
+
+    # Process and display each issue
+    for issue_data in issues_data:
+        issue = Issue(issue_data)
+        issue.display()
 
 
 if __name__ == "__main__":
-    # Initialize JiraClient
-    jira_client = JiraClient()
-    
-    # Fetch issues
-    issues = jira_client.get_issues()
-    
-    # Display each issue's details
-    for issue_data in issues:
-        issue = Issue(issue_data)
-        issue.display()
+    main()
+
 

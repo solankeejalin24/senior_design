@@ -291,9 +291,25 @@ Our project involves handling sensitive project management data, which means we 
 Our project budget includes $15 spent on purchasing OpenAI 4o tokens, which are sufficient to meet our needs through the end of Spring 2025. Additionally, we activated a free Jira subscription with limited features, which adequately supports all the required components and scope of our project. These resources ensure cost-effective yet efficient development for our objectives.
 ## Appendix
 - [Lang-Chain course used to learn RAG model architecture](https://github.com/bhancockio/langchain-crash-course)
-- [JIRA API and Forge documentation](https://github.com/bhancockio/langchain-crash-course)
-- [Rovo agent builder documentation](https://developer.atlassian.com/platform/forge/build-a-jira-issue-analyst-rovo-agent/)
+- [Forge documentation](https://developer.atlassian.com/cloud/jira/platform/getting-started-with-forge/)
 - [Sample template codes for programming](https://community.developer.atlassian.com/t/resources-to-get-started-building-rovo-agents-using-forge/82800)
 - [Kaggle Dataset used for reference](https://www.kaggle.com/datasets/antonyjr/jira-issue-reports-v1) [Initially explored but excluded from the final project due to excessive preprocessing requirements, redundant data, and irrelevant fields beyond the project's scope.]
-### Team Effort Table
+- [Rovo agent documentation](https://developer.atlassian.com/platform/forge/manifest-reference/modules/rovo-agent/#rovo-agent--eap-)
+- [Forge App Guide](https://developer.atlassian.com/platform/forge/manifest-reference/)
+### Team Effort-Time Matrix
+| Task Description                               | Arya Narke | Varad Parte | Daksh Prajapati  | Jalin Solankee | Total Hours |
+|------------------------------------------------|------------|-------------|------------------|----------------|-------------|
+| Decision and Proof of Concepts                 | 6          | 6           | 6                | 6              | **24**          |
+| Data Gathering, Cleansing, Preprocessing       | 4          | 4           | 4                | 10              | **22**           |
+| Investigating  ML Models for Predictive Analysis | 2       | 2           | 2                | 2              | **8**           |
+| Research Chatbot Interface (RovoAgent & Forge App) & Initial Development   | 4          | 4           | 10                | 4              | **22**           |
+| Develop Data Pipeline from Jira                | 10      | 4           | 4                | 4              | **22**           |
+| Implement ML Model for Task Prioritization     | 4          | 4           | 4                | 4              | **16**           |
+| Individual Study on RAG and Query Parsing and Response Generation Modules                   | 5          | 5           | 5                | 5              | **20**           |
+| Refining Chatbot using Forge App and Rovo      | 4          | 10          | 4                | 4              | **22**           |
+| Documentation, Testing, Reporting and Assignments | 6       | 6           | 6                | 6              | **24**           |
+| **Total Hours**                               | **45**     | **45**      | **45**           | **45**         | **180**     |
 
+**<mark>Currently in Phase 3 of the project as described in the above Task List & Timeline.</mark>**
+
+In addition to the development and research efforts, the team held weekly meetings lasting 2–3 hours. These sessions were dedicated to discussing progress updates, addressing roadblocks, brainstorming new ideas, and sharing newly researched materials that could inform future development. 

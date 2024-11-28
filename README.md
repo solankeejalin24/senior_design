@@ -294,5 +294,6 @@ Our project budget includes $15 spent on purchasing OpenAI 4o tokens, which are 
 - [JIRA API and Forge documentation](https://github.com/bhancockio/langchain-crash-course)
 - [Rovo agent builder documentation](https://developer.atlassian.com/platform/forge/build-a-jira-issue-analyst-rovo-agent/)
 - [Sample template codes for programming](https://community.developer.atlassian.com/t/resources-to-get-started-building-rovo-agents-using-forge/82800)
+- [Kaggle Dataset used for reference](https://www.kaggle.com/datasets/antonyjr/jira-issue-reports-v1) [Initially explored but excluded from the final project due to excessive preprocessing requirements, redundant data, and irrelevant fields beyond the project's scope.]
 ### Team Effort Table
 
